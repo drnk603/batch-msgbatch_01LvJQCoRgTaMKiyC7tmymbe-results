@@ -1,4 +1,33 @@
 <!DOCTYPE html><html lang="sk"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/cookie_policy.html",
+      "url": "https://domain.com/cookie_policy.html",
+      "name": "domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "inLanguage": "sk"
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zásady používania súborov cookie | domain</title>
@@ -11,29 +40,35 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header">
-   <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom" aria-label="Hlavná navigácia">
-    <div class="container-fluid">
-     <a class="navbar-brand c-logo" href="/" aria-label="Záhrada snov – Domov"> 
-      <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-       <rect width="150" height="40" rx="4" fill="#2C2C2C"></rect> <path d="M20 10L30 25L20 30L10 25L20 10Z" fill="#D4AF37"></path> <text x="45" y="26" font-family="serif" font-size="16" font-weight="600" fill="#D4AF37">Záhrada snov</text>
-      </svg> 
-     </a>
-     <button class="c-nav__toggle navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Prepnúť navigáciu"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse c-nav" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-       <li class="nav-item c-nav__item"><a class="nav-link" href="/" aria-current="page">Domov</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="about.html">O nás</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="services.html">Služby</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-      </ul>
-      <a href="contact.html" class="c-button c-button--primary ms-lg-3">Získať ponuku</a>
-     </div>
+  <header class="dr-header" aria-label="Primary">
+  <div class="dr-header-inner">
+    <div class="dr-header-brand">
+      <div class="dr-header-logo" aria-label="Záhrada snov logo">
+        <span class="dr-header-logo-mark"></span>
+        <span class="dr-header-logo-text">Záhrada snov</span>
+      </div>
     </div>
-   </nav>
-  </header>
+    <nav class="dr-nav" aria-label="Main navigation">
+      <button class="dr-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="dr-nav-toggle-bar"></span>
+        <span class="dr-nav-toggle-bar"></span>
+      </button>
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./impressum.html">Impressum</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main>
    <nav class="container py-3" aria-label="breadcrumb">
     <ol class="breadcrumb mb-0">
@@ -229,76 +264,57 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-dark text-light py-4 py-md-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-md-6 col-lg-4">
-      <h2 class="h5 fw-semibold mb-3">Záhrada snov</h2>
-      <p class="small text-light-emphasis mb-3">Profesionálne záhradnícke služby s osobným prístupom. Tvoríme záhrady, ktoré potešia oko i dušu.</p>
-      <div class="d-flex gap-3">
-       <a href="#" class="text-light" aria-label="Facebook"> 
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-         <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
-        </svg> 
-       </a> <a href="#" class="text-light" aria-label="Instagram"> 
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-         <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.509-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"></path>
-        </svg> 
-       </a>
+  <footer class="dr-footer" aria-label="Footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-main">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="Záhrada snov logo">
+          <span class="dr-footer-logo-mark"></span>
+          <span class="dr-footer-logo-text">Záhrada snov</span>
+        </div>
+        <p class="dr-footer-disclaimer">
+          The information provided on domain.com is for general informational purposes only and does not constitute professional, legal, financial, or technical advice. domain makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of any content or services on domain.com. Any reliance you place on such information is strictly at your own risk. domain reserves the right to modify content or services on domain.com at any time without prior notice.
+        </p>
       </div>
-     </div>
-     <div class="col-md-6 col-lg-2">
-      <h3 class="h6 fw-semibold mb-3">Navigácia</h3>
-      <ul class="list-unstyled small">
-       <li class="mb-2"><a href="/" class="text-light-emphasis text-decoration-none">Domov</a></li>
-       <li class="mb-2"><a href="about.html" class="text-light-emphasis text-decoration-none">O nás</a></li>
-       <li class="mb-2"><a href="services.html" class="text-light-emphasis text-decoration-none">Služby</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-light-emphasis text-decoration-none">Kontakt</a></li>
-      </ul>
-     </div>
-     <div class="col-md-6 col-lg-3">
-      <h3 class="h6 fw-semibold mb-3">Právne informácie</h3>
-      <ul class="list-unstyled small">
-       <li class="mb-2"><a href="privacy.html" class="text-light-emphasis text-decoration-none">Ochrana osobných údajov</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-light-emphasis text-decoration-none">Obchodné podmienky</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-light-emphasis text-decoration-none">Podmienky používania</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-light-emphasis text-decoration-none">Cookies</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-light-emphasis text-decoration-none">GDPR práva</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-light-emphasis text-decoration-none">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-md-6 col-lg-3">
-      <h3 class="h6 fw-semibold mb-3">Kontakt</h3>
-      <ul class="list-unstyled small">
-       <li class="mb-2">
-        <svg width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16" aria-hidden="true">
-         <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"></path>
-        </svg>
-        {telephone}
-       </li>
-       <li class="mb-2">
-        <svg width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16" aria-hidden="true">
-         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"></path>
-        </svg>
-        info@domain.com
-       </li>
-       <li>
-        <svg width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16" aria-hidden="true">
-         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-        </svg>
-        {address}
-       </li>
-      </ul>
-     </div>
+      <div class="dr-footer-nav-blocks">
+        <div class="dr-footer-nav-group" aria-label="Main navigation">
+          <h2 class="dr-footer-heading">Navigate</h2>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="dr-footer-nav-group" aria-label="Legal navigation">
+          <h2 class="dr-footer-heading">Legal</h2>
+          <ul class="dr-footer-nav-list dr-footer-nav-list-legal">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./privacy.html">Privacy</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./terms_and_conditions.html">Terms And Conditions</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./terms_of_services.html">Terms Of Services</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <hr class="my-4 border-secondary">
-    <div class="row">
-     <div class="col-12 text-center">
-      <p class="small text-light-emphasis mb-0">© 2025 Záhrada snov. Všetky práva vyhradené.</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-bottom-text">© <span class="dr-footer-bottom-brand">domain</span>. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
+  </div>
+</footer>
   <script src="script.js" defer=""></script>
  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>
